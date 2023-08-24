@@ -19,6 +19,7 @@
                             aria-describedby="send-btn"
                             name="message"
                             id="message"
+                            onkeydown="handleKeyDown(event)"
                         />
                         <div class="input-group-append">
                             <button
@@ -59,17 +60,25 @@
     socketio.on("message", (data) => {
         createMessage(data.name, data.message);
     });
+
     const sendMessage = () => {
         const message = document.getElementById("message");
         if (message.value === "") return;
         socketio.emit("message", { data: message.value });
         message.value = "";
     };
+
+    const handleKeyDown = (event) => {
+        if (event.key === "Enter") {
+            sendMessage();
+        }
+    };
 </script>
 
-{% for msg in messages %}
 <script type="text/javascript">
+    // Loop through messages after page load
+    {% for msg in messages %}
     createMessage("{{msg.name}}", "{{msg.message}}");
+    {% endfor %}
 </script>
-{% endfor %}
 {% endblock %}
