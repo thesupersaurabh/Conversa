@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card shadow-lg">
+                <div class="card-header bg-primary text-white">
+                    <h2 class="mb-0">About Conversa</h2>
+                </div>
+                <div class="card-body">
+                    <p>
+                        Conversa is a real-time chat application created as the final project for the CS50 Introduction to Computer Science course. The application allows users to connect and communicate with each other in real-time chat rooms.
+                    </p>
+                    <p>
+                        This application is built using a modern technology stack that includes:
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>Backend:</strong> The server-side logic is powered by Python and Flask, a micro web framework. Flask enables handling user requests, managing data, and facilitating real-time communication through Socket.IO.
+                        </li>
+                        <li>
+                            <strong>Frontend:</strong> The user interface is designed using HTML, CSS, and Bootstrap. Bootstrap ensures a responsive and visually appealing layout, making the application accessible across various devices.
+                        </li>
+                        <li>
+                            <strong>Real-time Communication:</strong> Socket.IO is utilized to establish real-time bidirectional communication between the server and clients. This technology enables instant messaging and updates without the need for constant page reloading.
+                        </li>
+                    </ul>
+                    <p>
+                        During the development of this project, inspiration was drawn from the Tech With Tim YouTube channel, which provided valuable insights and guidance in creating real-time applications using modern web development technologies.
+                    </p>
+                    <p>
+                        The Chat App project demonstrates the application of web development concepts learned during the CS50 course, providing a practical example of building a dynamic and interactive web application.
+                    </p>
+                    <p>
+                        You can find the source code in my <a href="https://github.com/thesupersaurabh/Conversa/tree/main" target="_blank" rel="noopener noreferrer">GitHub repository</a>.
+                    </p>                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
