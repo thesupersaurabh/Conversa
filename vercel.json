@@ -1,14 +1,14 @@
  {
      "builds": [
          {
-             "src": "Conversa/hello.py",
+             "src": "/app.py",
              "use": "@vercel/python"
          }
      ],
      "routes": [
          {
              "src": "/(.*)",
-             "dest": "Conversa/app.py"
+             "dest": "/app.py"
          }
      ]
  }
